@@ -10,9 +10,34 @@
     <style>   .overflow-hidden {
             overflow: hidden;
         }
-
-        .bg-blue {
+        .swiper_button_prev{
+            position: absolute;
+            top: 33%;
+            left: 64px;
+            width: 40px;
+            height: 40px;
             background-color: aqua;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper_button_next{
+            position: absolute;
+            top: 33%;
+            right: 64px;
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+           top: 60%;
         }
     </style>
 </head>
@@ -48,7 +73,7 @@
                 <div class="swiper-pagination !bottom-[4px] !text-center !absolute"></div>
             </div>
         </div>
-        <button aria-label="prev" class="bg-blue swiper_button_prev">
+        <button aria-label="prev" class=" swiper_button_prev">
             <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.65002 1.34901C8.72632 1.27268 8.78597 1.18288 8.82557 1.08476C8.86516 0.986633 8.88393 0.882096 8.88078 0.777116C8.87764 0.672136 8.85266 0.568769 8.80726 0.472916C8.76186 0.377064 8.69693 0.290603 8.61618 0.218471C8.53544 0.146339 8.44045 0.0899478 8.33665 0.0525173C8.23285 0.0150869 8.12227 -0.00264992 8.01122 0.000319814C7.90016 0.00328955 7.79082 0.0269075 7.68942 0.0698253C7.58803 0.112743 7.49656 0.17412 7.42026 0.250452L0.231186 7.44623C0.082722 7.59468 0 7.79122 0 7.99551C0 8.1998 0.082722 8.39634 0.231186 8.54478L7.42026 15.7414C7.49606 15.8194 7.5875 15.8824 7.68927 15.9267C7.79104 15.971 7.90111 15.9957 8.01309 15.9995C8.12506 16.0033 8.23671 15.9859 8.34155 15.9486C8.44639 15.9112 8.54233 15.8545 8.62379 15.7818C8.70526 15.7091 8.77063 15.6218 8.8161 15.525C8.86158 15.4282 8.88625 15.3238 8.88869 15.2179C8.89113 15.112 8.87129 15.0067 8.83031 14.9081C8.78934 14.8095 8.72806 14.7196 8.65002 14.6436L2.009 7.99551L8.65002 1.34901Z" fill="black"/>
                 </svg>
