@@ -7,12 +7,7 @@
     <title>Slider</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-
-.p-20{
-    padding: 20px;
-}
-        .overflow-hidden {
+    <style>   .overflow-hidden {
             overflow: hidden;
         }
 
@@ -29,23 +24,23 @@
             <div class="swiper-container pb-10 swiper-testimonial relative">
                 <div class="swiper-wrapper mb-2">
                     <!-- SWIPER SLIDE -->
-                    <div class="swiper-slide  p-20">
+                    <div class="swiper-slide">
                         <h2>Slide1</h2>
                         <img src="./assets/images/slide-img1.png" alt="slide-img1">
                     </div>
-                    <div class="swiper-slide p-20">
+                    <div class="swiper-slide">
                         <h2>Slide2</h2>
                         <img src="./assets/images/slide-img2.png" alt="slide-img2">
                     </div>
-                    <div class="swiper-slide p-20">
+                    <div class="swiper-slide">
                         <h2>Slide3</h2>
                         <img src="./assets/images/slide-img3.png" alt="slide-img3">
                     </div>
-                    <div class="swiper-slide p-20">
+                    <div class="swiper-slide">
                         <h2>Slide4</h2>
                         <img src="./assets/images/slide-img4.png" alt="slide-img4">
                     </div>
-                    <div class="swiper-slide p-20">
+                    <div class="swiper-slide">
                         <h2>Slide5</h2>
                         <img src="./assets/images/slide-img5.png" alt="slide-img5">
                     </div>
@@ -73,7 +68,7 @@
         const swiper = new Swiper(".swiper-testimonial", {
             loop: true,
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 1,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -89,15 +84,15 @@
             breakpoints: {
                 640: {
                     slidesPerView: 2,
-                    spaceBetween: 24,
+                    spaceBetween: 1,
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 24,
+                    spaceBetween: 1,
                 },
                 1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
+                    slidesPerView: 4,
+                    spaceBetween: 1,
                 },
             },
         });
