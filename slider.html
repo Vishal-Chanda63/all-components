@@ -1,537 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+
+.p-20{
+    padding: 20px;
+}
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .bg-blue {
+            background-color: aqua;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="conatiner">
+    <div class="container overflow-hidden">
         <div class="relative">
             <!-- SWIPER -->
             <div class="swiper-container pb-10 swiper-testimonial relative">
-              <div class="swiper-wrapper mb-2">
-                <!-- SWIPER SLIDE -->
-                <div
-                  class="swiper-slide !h-auto border border-black hover:border-green transition-all duration-300 border-opacity-20 shadow-testimonials rounded-10 bg-white p-4 sm:p-5 flex flex-col"
-                >
-                  <div class="flex me-auto mb-6 gap-5">
-                    <img
-                      class="size-12 h-12 md:size-[60px] rounded-full object-cover"
-                      src="./assets/images/webp/homepage/designer.webp"
-                      alt="designer"
-                    />
-                    <div class="flex md:gap-1 flex-col">
-                      <p
-                        class="text-black text-lg md:text-xl font-medium leading-150 font-montserrat"
-                      >
-                        Jacob
-                      </p>
-                      <p
-                        class="text-black text-sm md:text-base font-normal leading-150 font-montserrat"
-                      >
-                        Designer
-                      </p>
+                <div class="swiper-wrapper mb-2">
+                    <!-- SWIPER SLIDE -->
+                    <div class="swiper-slide  p-20">
+                        <h2>Slide1</h2>
+                        <img src="./assets/images/slide-img1.png" alt="slide-img1">
                     </div>
-                  </div>
-                  <p
-                    class="text-dark-gray md:max-w-[324px] relative text-base leading-150 font-normal font-montserrat mb-6 transition"
-                  >
-                    By merging professional networking with e-commerce, we
-                    provide a comprehensive solution for showcasing, selling,
-                    and growing one’s creative and technical Endeavor.
-                    <span
-                      class="absolute -top-2.5 pinter-events-none -z-10 left-0"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M0 24V17.1332C0 15.1585 0.360515 13.1052 1.08155 10.9734C1.82442 8.81907 2.8295 6.78822 4.09676 4.88079C5.38587 2.95091 6.82793 1.32399 8.42294 0L13.929 3.669C12.6399 5.6662 11.5583 7.75316 10.6844 9.92988C9.83222 12.0842 9.41708 14.4628 9.43893 17.0659V24H0ZM16.6165 24V17.1332C16.6165 15.1585 16.977 13.1052 17.698 10.9734C18.4409 8.81907 19.446 6.78822 20.7132 4.88079C22.0023 2.95091 23.4444 1.32399 25.0394 0L30.5454 3.669C29.2563 5.6662 28.1748 7.75316 27.3008 9.92988C26.4487 12.0842 26.0335 14.4628 26.0554 17.0659V24H16.6165Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-10">
-                      <svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M30.5454 24V17.1332C30.5454 15.1585 30.1849 13.1052 29.4639 10.9734C28.721 8.81907 27.7159 6.78822 26.4486 4.88079C25.1595 2.95091 23.7175 1.32399 22.1225 0L16.6164 3.669C17.9055 5.6662 18.9871 7.75316 19.8611 9.92988C20.7132 12.0842 21.1283 14.4628 21.1065 17.0659V24H30.5454ZM13.9289 24V17.1332C13.9289 15.1585 13.5684 13.1052 12.8474 10.9734C12.1045 8.81907 11.0995 6.78822 9.83219 4.88079C8.54308 2.95091 7.10102 1.32399 5.50601 0L-3.62396e-05 3.669C1.28908 5.6662 2.37062 7.75316 3.2446 9.92988C4.09673 12.0842 4.51187 14.4628 4.49002 17.0659V24H13.9289Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                  <div class="flex gap-[3px]">
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide !h-auto border border-black hover:border-green duration-300 transition-all border-opacity-20 shadow-testimonials rounded-10 bg-white p-4 sm:p-5 flex flex-col"
-                >
-                  <div class="flex me-auto mb-6 gap-5">
-                    <img
-                      class="size-12 h-12 md:size-[60px] rounded-full object-cover"
-                      src="./assets/images/webp/homepage/video-creator.webp"
-                      alt="designer"
-                    />
-                    <div class="flex md:gap-1 flex-col">
-                      <p
-                        class="text-black text-lg md:text-xl font-medium leading-150 font-montserrat"
-                      >
-                        Sophia
-                      </p>
-                      <p
-                        class="text-black text-sm md:text-base font-normal leading-150 font-montserrat"
-                      >
-                        Video Creator
-                      </p>
+                    <div class="swiper-slide p-20">
+                        <h2>Slide2</h2>
+                        <img src="./assets/images/slide-img2.png" alt="slide-img2">
                     </div>
-                  </div>
-                  <p
-                    class="text-dark-gray md:max-w-[324px] relative text-base leading-150 font-normal font-montserrat mb-6 transition"
-                  >
-                    Our platform seamlessly integrates e-commerce, enabling
-                    creators and developers to monetize their skills and
-                    products effortlessly. Users can sell digital products like
-                    designs.
-                    <span
-                      class="absolute -top-2.5 pinter-events-none -z-10 left-0"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M0 24V17.1332C0 15.1585 0.360515 13.1052 1.08155 10.9734C1.82442 8.81907 2.8295 6.78822 4.09676 4.88079C5.38587 2.95091 6.82793 1.32399 8.42294 0L13.929 3.669C12.6399 5.6662 11.5583 7.75316 10.6844 9.92988C9.83222 12.0842 9.41708 14.4628 9.43893 17.0659V24H0ZM16.6165 24V17.1332C16.6165 15.1585 16.977 13.1052 17.698 10.9734C18.4409 8.81907 19.446 6.78822 20.7132 4.88079C22.0023 2.95091 23.4444 1.32399 25.0394 0L30.5454 3.669C29.2563 5.6662 28.1748 7.75316 27.3008 9.92988C26.4487 12.0842 26.0335 14.4628 26.0554 17.0659V24H16.6165Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-10"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M30.5454 24V17.1332C30.5454 15.1585 30.1849 13.1052 29.4639 10.9734C28.721 8.81907 27.7159 6.78822 26.4486 4.88079C25.1595 2.95091 23.7175 1.32399 22.1225 0L16.6164 3.669C17.9055 5.6662 18.9871 7.75316 19.8611 9.92988C20.7132 12.0842 21.1283 14.4628 21.1065 17.0659V24H30.5454ZM13.9289 24V17.1332C13.9289 15.1585 13.5684 13.1052 12.8474 10.9734C12.1045 8.81907 11.0995 6.78822 9.83219 4.88079C8.54308 2.95091 7.10102 1.32399 5.50601 0L-3.62396e-05 3.669C1.28908 5.6662 2.37062 7.75316 3.2446 9.92988C4.09673 12.0842 4.51187 14.4628 4.49002 17.0659V24H13.9289Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                  <div class="flex gap-[3px]">
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide !h-auto border border-black hover:border-green duration-300 transition-all border-opacity-20 shadow-testimonials rounded-10 bg-white p-4 sm:p-5 flex flex-col"
-                >
-                  <div class="flex me-auto mb-6 gap-5">
-                    <img
-                      class="size-12 h-12 md:size-[60px] rounded-full object-cover"
-                      src="./assets/images/webp/homepage/programmer.webp"
-                      alt="designer"
-                    />
-                    <div class="flex md:gap-1 flex-col">
-                      <p
-                        class="text-black text-lg md:text-xl font-medium leading-150 font-montserrat"
-                      >
-                        John
-                      </p>
-                      <p
-                        class="text-black text-sm md:text-base font-normal leading-150 font-montserrat"
-                      >
-                        Programmer
-                      </p>
+                    <div class="swiper-slide p-20">
+                        <h2>Slide3</h2>
+                        <img src="./assets/images/slide-img3.png" alt="slide-img3">
                     </div>
-                  </div>
-                  <p
-                    class="text-dark-gray md:max-w-[324px] relative text-base leading-150 font-normal font-montserrat mb-6 transition"
-                  >
-                    The platform also supports freelance services, allowing
-                    professionals to offer their expertise for project-based
-                    work with a built-in payment system. This integration
-                    enhances.
-                    <span
-                      class="absolute -top-2.5 pinter-events-none -z-10 left-0"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M0 24V17.1332C0 15.1585 0.360515 13.1052 1.08155 10.9734C1.82442 8.81907 2.8295 6.78822 4.09676 4.88079C5.38587 2.95091 6.82793 1.32399 8.42294 0L13.929 3.669C12.6399 5.6662 11.5583 7.75316 10.6844 9.92988C9.83222 12.0842 9.41708 14.4628 9.43893 17.0659V24H0ZM16.6165 24V17.1332C16.6165 15.1585 16.977 13.1052 17.698 10.9734C18.4409 8.81907 19.446 6.78822 20.7132 4.88079C22.0023 2.95091 23.4444 1.32399 25.0394 0L30.5454 3.669C29.2563 5.6662 28.1748 7.75316 27.3008 9.92988C26.4487 12.0842 26.0335 14.4628 26.0554 17.0659V24H16.6165Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-10"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M30.5454 24V17.1332C30.5454 15.1585 30.1849 13.1052 29.4639 10.9734C28.721 8.81907 27.7159 6.78822 26.4486 4.88079C25.1595 2.95091 23.7175 1.32399 22.1225 0L16.6164 3.669C17.9055 5.6662 18.9871 7.75316 19.8611 9.92988C20.7132 12.0842 21.1283 14.4628 21.1065 17.0659V24H30.5454ZM13.9289 24V17.1332C13.9289 15.1585 13.5684 13.1052 12.8474 10.9734C12.1045 8.81907 11.0995 6.78822 9.83219 4.88079C8.54308 2.95091 7.10102 1.32399 5.50601 0L-3.62396e-05 3.669C1.28908 5.6662 2.37062 7.75316 3.2446 9.92988C4.09673 12.0842 4.51187 14.4628 4.49002 17.0659V24H13.9289Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                  <div class="flex gap-[3px]">
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide !h-auto border border-black hover:border-green duration-300 transition-all border-opacity-20 shadow-testimonials rounded-10 bg-white p-4 sm:p-5 flex flex-col"
-                >
-                  <div class="flex me-auto mb-6 gap-5">
-                    <img
-                      class="size-12 h-12 md:size-[60px] rounded-full object-cover"
-                      src="./assets/images/webp/homepage/designer.webp"
-                      alt="designer"
-                    />
-                    <div class="flex md:gap-1 flex-col">
-                      <p
-                        class="text-black text-lg md:text-xl font-medium leading-150 font-montserrat"
-                      >
-                        Jacob
-                      </p>
-                      <p
-                        class="text-black text-sm md:text-base font-normal leading-150 font-montserrat"
-                      >
-                        Designer
-                      </p>
+                    <div class="swiper-slide p-20">
+                        <h2>Slide4</h2>
+                        <img src="./assets/images/slide-img4.png" alt="slide-img4">
                     </div>
-                  </div>
-                  <p
-                    class="text-dark-gray md:max-w-[324px] relative text-base leading-150 font-normal font-montserrat mb-6 transition"
-                  >
-                    By merging professional networking with e-commerce, we
-                    provide a comprehensive solution for showcasing, selling,
-                    and growing one’s creative and technical Endeavor.
-                    <span
-                      class="absolute -top-2.5 pinter-events-none -z-10 left-0"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M0 24V17.1332C0 15.1585 0.360515 13.1052 1.08155 10.9734C1.82442 8.81907 2.8295 6.78822 4.09676 4.88079C5.38587 2.95091 6.82793 1.32399 8.42294 0L13.929 3.669C12.6399 5.6662 11.5583 7.75316 10.6844 9.92988C9.83222 12.0842 9.41708 14.4628 9.43893 17.0659V24H0ZM16.6165 24V17.1332C16.6165 15.1585 16.977 13.1052 17.698 10.9734C18.4409 8.81907 19.446 6.78822 20.7132 4.88079C22.0023 2.95091 23.4444 1.32399 25.0394 0L30.5454 3.669C29.2563 5.6662 28.1748 7.75316 27.3008 9.92988C26.4487 12.0842 26.0335 14.4628 26.0554 17.0659V24H16.6165Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-10"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M30.5454 24V17.1332C30.5454 15.1585 30.1849 13.1052 29.4639 10.9734C28.721 8.81907 27.7159 6.78822 26.4486 4.88079C25.1595 2.95091 23.7175 1.32399 22.1225 0L16.6164 3.669C17.9055 5.6662 18.9871 7.75316 19.8611 9.92988C20.7132 12.0842 21.1283 14.4628 21.1065 17.0659V24H30.5454ZM13.9289 24V17.1332C13.9289 15.1585 13.5684 13.1052 12.8474 10.9734C12.1045 8.81907 11.0995 6.78822 9.83219 4.88079C8.54308 2.95091 7.10102 1.32399 5.50601 0L-3.62396e-05 3.669C1.28908 5.6662 2.37062 7.75316 3.2446 9.92988C4.09673 12.0842 4.51187 14.4628 4.49002 17.0659V24H13.9289Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                  <div class="flex gap-[3px]">
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide !h-auto border border-black hover:border-green duration-300 transition-all border-opacity-20 shadow-testimonials rounded-10 bg-white p-4 sm:p-5 flex flex-col"
-                >
-                  <div class="flex me-auto mb-6 gap-5">
-                    <img
-                      class="size-12 h-12 md:size-[60px] rounded-full object-cover"
-                      src="./assets/images/webp/homepage/programmer.webp"
-                      alt="designer"
-                    />
-                    <div class="flex md:gap-1 flex-col">
-                      <p
-                        class="text-black text-lg md:text-xl font-medium leading-150 font-montserrat"
-                      >
-                        John
-                      </p>
-                      <p
-                        class="text-black text-sm md:text-base font-normal leading-150 font-montserrat"
-                      >
-                        Programmer
-                      </p>
+                    <div class="swiper-slide p-20">
+                        <h2>Slide5</h2>
+                        <img src="./assets/images/slide-img5.png" alt="slide-img5">
                     </div>
-                  </div>
-                  <p
-                    class="text-dark-gray md:max-w-[324px] relative text-base leading-150 font-normal font-montserrat mb-6 transition"
-                  >
-                    The platform also supports freelance services, allowing
-                    professionals to offer their expertise for project-based
-                    work with a built-in payment system. This integration
-                    enhances.
-                    <span
-                      class="absolute -top-2.5 pinter-events-none -z-10 left-0"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M0 24V17.1332C0 15.1585 0.360515 13.1052 1.08155 10.9734C1.82442 8.81907 2.8295 6.78822 4.09676 4.88079C5.38587 2.95091 6.82793 1.32399 8.42294 0L13.929 3.669C12.6399 5.6662 11.5583 7.75316 10.6844 9.92988C9.83222 12.0842 9.41708 14.4628 9.43893 17.0659V24H0ZM16.6165 24V17.1332C16.6165 15.1585 16.977 13.1052 17.698 10.9734C18.4409 8.81907 19.446 6.78822 20.7132 4.88079C22.0023 2.95091 23.4444 1.32399 25.0394 0L30.5454 3.669C29.2563 5.6662 28.1748 7.75316 27.3008 9.92988C26.4487 12.0842 26.0335 14.4628 26.0554 17.0659V24H16.6165Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                    <span class="absolute bottom-0 right-10"
-                      ><svg
-                        width="31"
-                        height="24"
-                        viewBox="0 0 31 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.3"
-                          d="M30.5454 24V17.1332C30.5454 15.1585 30.1849 13.1052 29.4639 10.9734C28.721 8.81907 27.7159 6.78822 26.4486 4.88079C25.1595 2.95091 23.7175 1.32399 22.1225 0L16.6164 3.669C17.9055 5.6662 18.9871 7.75316 19.8611 9.92988C20.7132 12.0842 21.1283 14.4628 21.1065 17.0659V24H30.5454ZM13.9289 24V17.1332C13.9289 15.1585 13.5684 13.1052 12.8474 10.9734C12.1045 8.81907 11.0995 6.78822 9.83219 4.88079C8.54308 2.95091 7.10102 1.32399 5.50601 0L-3.62396e-05 3.669C1.28908 5.6662 2.37062 7.75316 3.2446 9.92988C4.09673 12.0842 4.51187 14.4628 4.49002 17.0659V24H13.9289Z"
-                          fill="#A5D3D1"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                  <div class="flex gap-[3px]">
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                    <img
-                      src="./assets/images/svg/homepage/star-icon.svg"
-                      class="size-5 md:size-6"
-                      alt="star-icon"
-                    />
-                  </div>
                 </div>
-              </div>
-              <div
-                class="swiper-pagination !bottom-[4px] !text-center !absolute"
-              ></div>
+                <div class="swiper-pagination !bottom-[4px] !text-center !absolute"></div>
             </div>
-          </div>
-          <button
-            aria-label="prev"
-            class="size-9 bg-green bg-opacity-10 hover:bg-opacity-100 swiper_button_prev absolute top-1/2 left-[6.5%] z-40 max-custom-xl:hidden custom-xl:translate-y-[370%] duration-300 rounded-full group flex justify-center items-center"
-          >
-            <svg
-              class="rotate-180 flex justify-center items-center"
-              width="8"
-              height="13"
-              viewBox="0 0 8 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="group-hover:fill-white fill-green duration-300"
-                d="M1.2842 0.295798C1.37716 0.20207 1.48777 0.127676 1.60962 0.0769072C1.73148 0.0261385 1.86219 0 1.9942 0C2.12621 0 2.25692 0.0261385 2.37878 0.0769072C2.50064 0.127676 2.61124 0.20207 2.7042 0.295798L7.7042 5.2958C7.79793 5.38876 7.87232 5.49936 7.92309 5.62122C7.97386 5.74308 8 5.87379 8 6.0058C8 6.13781 7.97386 6.26852 7.92309 6.39038C7.87232 6.51223 7.79793 6.62284 7.7042 6.7158L2.7042 11.7158C2.61124 11.8095 2.50064 11.8839 2.37878 11.9347C2.25692 11.9855 2.12621 12.0116 1.9942 12.0116C1.86219 12.0116 1.73148 11.9855 1.60962 11.9347C1.48777 11.8839 1.37716 11.8095 1.2842 11.7158C1.19047 11.6228 1.11608 11.5122 1.06531 11.3904C1.01454 11.2685 0.988403 11.1378 0.988403 11.0058C0.988403 10.8738 1.01454 10.7431 1.06531 10.6212C1.11608 10.4994 1.19047 10.3888 1.2842 10.2958L5.5842 6.0058L1.2842 1.7158C1.19047 1.62284 1.11608 1.51223 1.06531 1.39038C1.01454 1.26852 0.988403 1.13781 0.988403 1.0058C0.988403 0.873786 1.01454 0.743081 1.06531 0.621222C1.11608 0.499362 1.19047 0.388761 1.2842 0.295798Z"
-                fill="none"
-              />
+        </div>
+        <button aria-label="prev" class="bg-blue swiper_button_prev">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.65002 1.34901C8.72632 1.27268 8.78597 1.18288 8.82557 1.08476C8.86516 0.986633 8.88393 0.882096 8.88078 0.777116C8.87764 0.672136 8.85266 0.568769 8.80726 0.472916C8.76186 0.377064 8.69693 0.290603 8.61618 0.218471C8.53544 0.146339 8.44045 0.0899478 8.33665 0.0525173C8.23285 0.0150869 8.12227 -0.00264992 8.01122 0.000319814C7.90016 0.00328955 7.79082 0.0269075 7.68942 0.0698253C7.58803 0.112743 7.49656 0.17412 7.42026 0.250452L0.231186 7.44623C0.082722 7.59468 0 7.79122 0 7.99551C0 8.1998 0.082722 8.39634 0.231186 8.54478L7.42026 15.7414C7.49606 15.8194 7.5875 15.8824 7.68927 15.9267C7.79104 15.971 7.90111 15.9957 8.01309 15.9995C8.12506 16.0033 8.23671 15.9859 8.34155 15.9486C8.44639 15.9112 8.54233 15.8545 8.62379 15.7818C8.70526 15.7091 8.77063 15.6218 8.8161 15.525C8.86158 15.4282 8.88625 15.3238 8.88869 15.2179C8.89113 15.112 8.87129 15.0067 8.83031 14.9081C8.78934 14.8095 8.72806 14.7196 8.65002 14.6436L2.009 7.99551L8.65002 1.34901Z" fill="black"/>
+                </svg>
+                
+        </button>
+        <button aria-label="next"
+            class=" bg-blue swiper_button_next">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.349984 1.34901C0.273681 1.27268 0.214028 1.18288 0.174433 1.08476C0.134837 0.986633 0.116075 0.882096 0.119216 0.777116C0.122357 0.672136 0.147342 0.568769 0.192741 0.472916C0.238142 0.377064 0.303068 0.290603 0.383816 0.218471C0.464562 0.146339 0.559548 0.0899478 0.663349 0.0525173C0.76715 0.0150869 0.877732 -0.00264992 0.988784 0.000319814C1.09984 0.00328955 1.20918 0.0269075 1.31058 0.0698253C1.41197 0.112743 1.50344 0.17412 1.57974 0.250452L8.76881 7.44623C8.91728 7.59468 9 7.79122 9 7.99551C9 8.1998 8.91728 8.39634 8.76881 8.54478L1.57974 15.7414C1.50394 15.8194 1.4125 15.8824 1.31073 15.9267C1.20896 15.971 1.09889 15.9957 0.986915 15.9995C0.874939 16.0033 0.763289 15.9859 0.658449 15.9486C0.55361 15.9112 0.457671 15.8545 0.376206 15.7818C0.294741 15.7091 0.229372 15.6218 0.183898 15.525C0.138424 15.4282 0.113751 15.3238 0.111311 15.2179C0.108871 15.112 0.128715 15.0067 0.169687 14.9081C0.21066 14.8095 0.271945 14.7196 0.349984 14.6436L6.991 7.99551L0.349984 1.34901Z" fill="black"/>
+                </svg>
+                
             </svg>
-          </button>
-          <button
-            aria-label="next"
-            class="size-9 bg-green bg-opacity-10 hover:bg-opacity-100 swiper_button_next absolute top-1/2 right-[6.5%] z-30 max-custom-xl:hidden custom-xl:translate-y-[370%] duration-300 rounded-full group flex justify-center items-center"
-          >
-            <svg
-              width="8"
-              height="13"
-              viewBox="0 0 8 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="group-hover:fill-white fill-green duration-300"
-                d="M1.2842 0.295798C1.37716 0.20207 1.48777 0.127676 1.60962 0.0769072C1.73148 0.0261385 1.86219 0 1.9942 0C2.12621 0 2.25692 0.0261385 2.37878 0.0769072C2.50064 0.127676 2.61124 0.20207 2.7042 0.295798L7.7042 5.2958C7.79793 5.38876 7.87232 5.49936 7.92309 5.62122C7.97386 5.74308 8 5.87379 8 6.0058C8 6.13781 7.97386 6.26852 7.92309 6.39038C7.87232 6.51223 7.79793 6.62284 7.7042 6.7158L2.7042 11.7158C2.61124 11.8095 2.50064 11.8839 2.37878 11.9347C2.25692 11.9855 2.12621 12.0116 1.9942 12.0116C1.86219 12.0116 1.73148 11.9855 1.60962 11.9347C1.48777 11.8839 1.37716 11.8095 1.2842 11.7158C1.19047 11.6228 1.11608 11.5122 1.06531 11.3904C1.01454 11.2685 0.988403 11.1378 0.988403 11.0058C0.988403 10.8738 1.01454 10.7431 1.06531 10.6212C1.11608 10.4994 1.19047 10.3888 1.2842 10.2958L5.5842 6.0058L1.2842 1.7158C1.19047 1.62284 1.11608 1.51223 1.06531 1.39038C1.01454 1.26852 0.988403 1.13781 0.988403 1.0058C0.988403 0.873786 1.01454 0.743081 1.06531 0.621222C1.11608 0.499362 1.19047 0.388761 1.2842 0.295798Z"
-                fill="none"
-              />
-            </svg>
-          </button>
+        </button>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".swiper-testimonial", {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 10,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper_button_next",
-            prevEl: ".swiper_button_prev",
-          },
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 24,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 24,
+            navigation: {
+                nextEl: ".swiper_button_next",
+                prevEl: ".swiper_button_prev",
             },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 24,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-          },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+            },
         });
-      </script>
-  
+    </script>
+
 </body>
+
 </html>
