@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    list-style-type: none !important;
+    text-decoration: none !important;
+}
+        /* -------====navbar====-----*/
+@media (max-width: 992px) {
+    .mobile_view {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        min-height: 100vh;
+        background-color: lightseagreen;
+        transition: 300ms linear;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        width: 30px;
+        min-height: 3px;
+        background-color: black;
+        transition: 300ms linear;
+    }
+
+    .cross .line1 {
+        transform: rotate(50deg) translate(17px, 14px);
+    }
+
+    .cross .line2 {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    .cross .line3 {
+        transform: rotate(-50deg) translateY(-50%);
+    }
+
+    .border1 {
+        position: relative;
+    }
+
+    .border1::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -246%;
+        right: -246%;
+        opacity: 0.2;
+    }
+
+    .border2 {
+        position: relative;
+    }
+
+    .border2::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -183%;
+        right: -183%;
+        opacity: 0.2;
+    }
+
+    .border3 {
+        position: relative;
+    }
+
+    .border3::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -217%;
+        right: -217%;
+        opacity: 0.2;
+    }
+
+    .border4 {
+        position: relative;
+    }
+
+    .border4::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -387%;
+        right: -387%;
+        opacity: 0.2;
+    }
+}
+
+.nav-line:hover::after {
+    width: 100%;
+    transition: all 300ms linear;
+}
+
+.nav-line::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 15px;
+    background-color: var(--text-black);
+    bottom: -12px;
+    transition: all 300ms linear;
+}
+.border-none {
+    border: none;
+}
+.logo{
+    position: relative;
+    z-index: 3;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="py-3 ">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+               <h2 class="logo">LOGO</h2>
+                <div class="link ">
+                    <ul class="d-flex align-items-center justify-content-center gap-4 mb-0 mobile_view ps-0"
+                        id="navbar">
+                        <li class="pt-3 border1 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">Home</a>
+                        </li>
+                        <li class="pt-3 border1 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">About</a>
+                        </li>
+                        <li class="pt-3 border2 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">Services</a>
+                        </li>
+                        <li class="pt-3 border3 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative">Pricing</a>
+                        </li>
+                        <li class="pt-3 border4 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative me-lg-130 ">FAQ</a>
+                        </li>
+                        <li><button
+                                class="ml-lg-89 d-block d-lg-none ml-0 px-3 py-2 border-none  text-white ff-ma fs-16 fw-semibold bg-black">Login</button>
+                        </li>
+                    </ul>
+                    <div id="menubtn-icon" onclick="openNav()" class="z-3 pe-2 pt-1 position-relative">
+                        <div class="line1"></div>
+                        <div class="line2 my-2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                <button
+                class="ml-lg-89 ml-0 px-3 py-2 border-none  text-white ff-ma fs-16 fw-semibold bg-black d-none d-lg-block">Login</button>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        function openNav() {
+    document.getElementById("navbar").classList.toggle("end-0");
+    document.body.classList.toggle("overflow_hidden");
+    document.getElementById("menubtn-icon").classList.toggle("cross")
+}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    list-style-type: none !important;
+    text-decoration: none !important;
+}
+        /* -------====navbar====-----*/
+@media (max-width: 991.98px) {
+    .mobile_view {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        min-height: 100vh;
+        background-color: lightseagreen;
+        transition: 300ms linear;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        width: 30px;
+        min-height: 3px;
+        background-color: black;
+        transition: 300ms linear;
+    }
+
+    .cross .line1 {
+        transform: rotate(50deg) translate(17px, 14px);
+    }
+
+    .cross .line2 {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    .cross .line3 {
+        transform: rotate(-50deg) translateY(-50%);
+    }
+
+    .border1 {
+        position: relative;
+    }
+
+    .border1::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -246%;
+        right: -246%;
+        opacity: 0.2;
+    }
+
+    .border2 {
+        position: relative;
+    }
+
+    .border2::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -183%;
+        right: -183%;
+        opacity: 0.2;
+    }
+
+    .border3 {
+        position: relative;
+    }
+
+    .border3::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -217%;
+        right: -217%;
+        opacity: 0.2;
+    }
+
+    .border4 {
+        position: relative;
+    }
+
+    .border4::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        background: var(--bs-white);
+        bottom: -40%;
+        left: -387%;
+        right: -387%;
+        opacity: 0.2;
+    }
+}
+
+.nav-line:hover::after {
+    width: 100%;
+    transition: all 300ms linear;
+}
+
+.nav-line::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 15px;
+    background-color: var(--text-black);
+    bottom: -12px;
+    transition: all 300ms linear;
+}
+.border-none {
+    border: none;
+}
+.logo{
+    position: relative;
+    z-index: 3;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="py-3 ">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+               <h2 class="logo">LOGO</h2>
+                <div class="link">
+                    <ul class="d-flex align-items-center justify-content-center gap-4 mb-0 mobile_view ps-0"
+                        id="navbar">
+                        <li class="pt-3 border1 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">Home</a>
+                        </li>
+                        <li class="pt-3 border1 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">About</a>
+                        </li>
+                        <li class="pt-3 border2 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative ">Services</a>
+                        </li>
+                        <li class="pt-3 border3 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative">Pricing</a>
+                        </li>
+                        <li class="pt-3 border4 pt-lg-0"><a href=""
+                                class="list-unstyled text-decoration-none fs-16 fw-normal text-black  ff-ma nav-line position-relative me-lg-130 ">FAQ</a>
+                        </li>
+                        <li><button
+                                class="ml-lg-89 ml-0 px-3 py-2 border-none  text-white ff-ma fs-16 fw-semibold bg-black">Login</button>
+                        </li>
+                    </ul>
+                    <div id="menubtn-icon" onclick="openNav()" class="z-3 pe-2 pt-1 position-relative">
+                        <div class="line1"></div>
+                        <div class="line2 my-2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container overflow-hidden">
+        <div class="relative">
+            <!-- SWIPER -->
+            <div class="swiper-container pb-10 swiper-testimonial relative">
+                <div class="swiper-wrapper mb-2">
+                    <!-- SWIPER SLIDE -->
+                    <div class="swiper-slide">
+                        <h2>Slide1</h2>
+                        <img src="./assets/images/slide-img1.png" alt="slide-img1">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Slide2</h2>
+                        <img src="./assets/images/slide-img2.png" alt="slide-img2">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Slide3</h2>
+                        <img src="./assets/images/slide-img3.png" alt="slide-img3">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Slide4</h2>
+                        <img src="./assets/images/slide-img4.png" alt="slide-img4">
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Slide5</h2>
+                        <img src="./assets/images/slide-img5.png" alt="slide-img5">
+                    </div>
+                </div>
+                <div class="swiper-pagination !bottom-[4px] !text-center !absolute"></div>
+            </div>
+        </div>
+        <button aria-label="prev" class=" swiper_button_prev">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.65002 1.34901C8.72632 1.27268 8.78597 1.18288 8.82557 1.08476C8.86516 0.986633 8.88393 0.882096 8.88078 0.777116C8.87764 0.672136 8.85266 0.568769 8.80726 0.472916C8.76186 0.377064 8.69693 0.290603 8.61618 0.218471C8.53544 0.146339 8.44045 0.0899478 8.33665 0.0525173C8.23285 0.0150869 8.12227 -0.00264992 8.01122 0.000319814C7.90016 0.00328955 7.79082 0.0269075 7.68942 0.0698253C7.58803 0.112743 7.49656 0.17412 7.42026 0.250452L0.231186 7.44623C0.082722 7.59468 0 7.79122 0 7.99551C0 8.1998 0.082722 8.39634 0.231186 8.54478L7.42026 15.7414C7.49606 15.8194 7.5875 15.8824 7.68927 15.9267C7.79104 15.971 7.90111 15.9957 8.01309 15.9995C8.12506 16.0033 8.23671 15.9859 8.34155 15.9486C8.44639 15.9112 8.54233 15.8545 8.62379 15.7818C8.70526 15.7091 8.77063 15.6218 8.8161 15.525C8.86158 15.4282 8.88625 15.3238 8.88869 15.2179C8.89113 15.112 8.87129 15.0067 8.83031 14.9081C8.78934 14.8095 8.72806 14.7196 8.65002 14.6436L2.009 7.99551L8.65002 1.34901Z" fill="black"/>
+                </svg>
+                
+        </button>
+        <button aria-label="next"
+            class=" bg-blue swiper_button_next">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.349984 1.34901C0.273681 1.27268 0.214028 1.18288 0.174433 1.08476C0.134837 0.986633 0.116075 0.882096 0.119216 0.777116C0.122357 0.672136 0.147342 0.568769 0.192741 0.472916C0.238142 0.377064 0.303068 0.290603 0.383816 0.218471C0.464562 0.146339 0.559548 0.0899478 0.663349 0.0525173C0.76715 0.0150869 0.877732 -0.00264992 0.988784 0.000319814C1.09984 0.00328955 1.20918 0.0269075 1.31058 0.0698253C1.41197 0.112743 1.50344 0.17412 1.57974 0.250452L8.76881 7.44623C8.91728 7.59468 9 7.79122 9 7.99551C9 8.1998 8.91728 8.39634 8.76881 8.54478L1.57974 15.7414C1.50394 15.8194 1.4125 15.8824 1.31073 15.9267C1.20896 15.971 1.09889 15.9957 0.986915 15.9995C0.874939 16.0033 0.763289 15.9859 0.658449 15.9486C0.55361 15.9112 0.457671 15.8545 0.376206 15.7818C0.294741 15.7091 0.229372 15.6218 0.183898 15.525C0.138424 15.4282 0.113751 15.3238 0.111311 15.2179C0.108871 15.112 0.128715 15.0067 0.169687 14.9081C0.21066 14.8095 0.271945 14.7196 0.349984 14.6436L6.991 7.99551L0.349984 1.34901Z" fill="black"/>
+                </svg>
+                
+            </svg>
+        </button>
+    </div>
+    <script>
+        function openNav() {
+    document.getElementById("navbar").classList.toggle("end-0");
+    document.body.classList.toggle("overflow_hidden");
+    document.getElementById("menubtn-icon").classList.toggle("cross")
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

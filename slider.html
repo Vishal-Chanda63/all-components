@@ -12,7 +12,7 @@
         }
         .swiper_button_prev{
             position: absolute;
-            top: 33%;
+            top: 58%;
             left: 64px;
             width: 40px;
             height: 40px;
@@ -22,10 +22,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 20;
         }
         .swiper_button_next{
             position: absolute;
-            top: 33%;
+            top: 58%;
             right: 64px;
             width: 40px;
             height: 40px;
@@ -35,6 +36,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 20;
         }
         .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
            top: 60%;
@@ -69,6 +71,10 @@
                         <h2>Slide5</h2>
                         <img src="./assets/images/slide-img5.png" alt="slide-img5">
                     </div>
+                    <div class="swiper-slide">
+                        <h2>Slide1</h2>
+                        <img src="./assets/images/slide-img1.png" alt="slide-img1">
+                    </div>
                 </div>
                 <div class="swiper-pagination !bottom-[4px] !text-center !absolute"></div>
             </div>
@@ -94,7 +100,8 @@
             loop: true,
             slidesPerView: 1,
             spaceBetween: 1,
-            autoplay: true,
+            centeredSlides: true, 
+            autoplay:true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -104,19 +111,47 @@
                 prevEl: ".swiper_button_prev",
             },
             autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
             breakpoints: {
-                640: {
+                300: {
                     slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                350: {
+                    slidesPerView: 1.2,
                     spaceBetween: 1,
                 },
-                768: {
+                400: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 1,
+                },
+                450: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 1,
+                },
+                550: {
+                    slidesPerView: 2,
+                    spaceBetween: 1,
+                },
+                700: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 1,
+                },
+                850: {
                     slidesPerView: 3,
                     spaceBetween: 1,
                 },
-                1024: {
+                970: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 1,
+                },
+                1030: {
+                    slidesPerView: 3.8,
+                    spaceBetween: 1,
+                },
+                1140: {
                     slidesPerView: 4,
                     spaceBetween: 1,
                 },
