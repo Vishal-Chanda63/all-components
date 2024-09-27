@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block !important;
+        }
+
+        .tab-button.active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="flex space-x-4">
+            <button data-tab="1" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 1</button>
+            <button data-tab="2" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 2</button>
+            <button data-tab="3" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 3</button>
+            <button data-tab="4" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 4</button>
+            <button data-tab="5" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 5</button>
+            <button data-tab="6" class="tab-button py-2 px-4 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-all">Button 6</button>
+        </div>
+
+        <div class="mt-6 p-4 border border-gray-300 rounded bg-white">
+            <div class="tab-content" id="tab1">
+                <h2 class="text-2xl font-semibold">Tab 1 content</h2>
+            </div>
+            <div class="tab-content" id="tab2">
+                <h2 class="text-2xl font-semibold">Tab 2 content</h2>
+            </div>
+            <div class="tab-content" id="tab3">
+                <h2 class="text-2xl font-semibold">Tab 3 content</h2>
+            </div>
+            <div class="tab-content" id="tab4">
+                <h2 class="text-2xl font-semibold">Tab 4 content</h2>
+            </div>
+            <div class="tab-content" id="tab5">
+                <h2 class="text-2xl font-semibold">Tab 5 content</h2>
+            </div>
+            <div class="tab-content" id="tab6">
+                <h2 class="text-2xl font-semibold">Tab 6 content</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    // Remove 'active' class from all tabs and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add 'active' class to the clicked tab and corresponding content
+                    button.classList.add('active');
+                    document.querySelector(`#tab${targetTab}`).classList.add('active');
+                });
+            });
+
+            // Optionally, activate the first tab by default
+            if (tabButtons.length > 0) {
+                tabButtons[0].click();
+            }
+        });
+    </script>
+</body>
+
+</html>

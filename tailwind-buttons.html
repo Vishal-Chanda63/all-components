@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="min-h-screen  flex justify-center items-center">
+        <div class="flex gap-5 flex-wrap">
+            <button
+                class="bg-red-400 text-black py-3 px-5 rounded-full font-semibold relative z-10 after:absolute after:bg-black after:top-0 after:bottom-0 hover:after:right-0 after:duration-300 after:-z-10 hover:text-white duration-300 after:right-[-200%] overflow-hidden after:w-full">
+                RIGHT HOVER
+            </button>
+            <button
+                class="bg-red-400 text-black py-3 px-5 rounded-full font-semibold relative z-10 after:absolute after:bg-black after:top-0 after:bottom-0 hover:after:left-0 after:duration-300 after:-z-10 hover:text-white duration-300 after:left-[-200%] overflow-hidden after:w-full">
+                LEFT HOVER
+            </button>
+            <button
+                class="bg-red-400 text-black py-3 px-5 rounded-full font-semibold relative z-10 after:absolute after:bg-black hover:after:top-0  after:right-0 after:left-0 after:duration-300 after:-z-10 hover:text-white duration-300 after:top-[-200%] overflow-hidden after:h-full">
+                TOP HOVER
+            </button>
+            <button
+                class="bg-red-400 text-black py-3 px-5 rounded-full font-semibold relative z-10 after:absolute after:bg-black hover:after:bottom-0  after:right-0 after:left-0 after:duration-300 after:-z-10 hover:text-white duration-300 after:bottom-[-200%] overflow-hidden after:h-full">
+                BOTTOM HOVER
+            </button>
+            <button class="bg-blue-600 text-white py-3 px-5 font-semibold rounded-full z-10 relative after:absolute after:w-full after:bg-orange-500 after:left-0 after:right-0 after:top-[-100%] after:bottom-1/2 hover:after:top-0 after:h-1/2 overflow-hidden before:w-full before:absolute before:bg-orange-500 before:h-2/3 before:left-0 before:right-0 before:duration-300 after:duration-300 after:-z-10 before:-z-10 before:bottom-[-200%] hover:before:bottom-0">
+                UP Down Button
+            </button>
+            
+            <button class="bg-blue-600 text-white py-3 px-5 font-semibold rounded-full z-10 relative after:h-full after:bg-orange-500 after:absolute after:top-0 after:w-1/2 after:left-[-100%] hover:after:left-0 after:duration-300 after:-z-10 overflow-hidden before:h-full before:w-2/3 before:top-0 before:bottom-0 before:right-[-100%] before:bg-orange-500 before:absolute hover:before:right-0 before:-z-10 before:duration-300 ">
+             Left Right Button
+            </button>
+            <button class="relative h-12 w-40 overflow-hidden border border-indigo-600 text-indigo-600 shadow-2xl transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-indigo-600 before:duration-300 before:ease-out hover:text-white hover:shadow-indigo-600 hover:before:h-40 hover:before:w-40 hover:before:opacity-80">
+                <span class="relative z-10">Center Hover</span>
+              </button>
+              <button class="before:ease relative h-12 w-40 overflow-hidden border border-black shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-gray-900 before:transition-all before:duration-300 hover:text-white hover:shadow-black hover:before:-rotate-180">
+                <span class="relative z-10">Slide hover</span>
+              </button>
+              <button class="before:ease relative h-12 w-40 overflow-hidden border border-blue-500 text-blue-500 shadow-2xl transition-all before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center before:-translate-x-20 before:rotate-45 before:bg-blue-500 before:duration-300 hover:text-white hover:shadow-blue-500 hover:before:h-64 hover:before:-translate-y-32">
+                <span class="relative z-10">Skew curtain</span>
+              </button>
+          
+              <button class="before:ease relative h-12 w-40 overflow-hidden border border-green-500 bg-green-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-green-500 hover:before:-translate-x-40">
+                <span relative="relative z-10">Shine</span>
+              </button>
+              <button class="group relative min-h-[50px] w-40 overflow-hidden border border-purple-500 bg-white text-purple-500 shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-0 before:w-1/4 before:bg-purple-500 before:duration-500 after:absolute after:bottom-0 after:right-0 after:h-0 after:w-1/4 after:bg-purple-500 after:duration-500 hover:text-white hover:before:h-full hover:after:h-full">
+                <span class="top-0 flex h-full w-full items-center justify-center before:absolute before:bottom-0 before:left-1/4 before:z-0 before:h-0 before:w-1/4 before:bg-purple-500 before:duration-500 after:absolute after:right-1/4 after:top-0 after:z-0 after:h-0 after:w-1/4 after:bg-purple-500 after:duration-500 hover:text-white group-hover:before:h-full group-hover:after:h-full"></span>
+                <span class="absolute bottom-0 left-0 right-0 top-0 z-10 flex h-full w-full items-center justify-center group-hover:text-white">Alternate</span>
+              </button>
+              <button class="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-gray-800 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-orange-600 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-56">
+                <span class="relative z-10">Circle hover</span>
+              </button>
+          
+              <button class="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-blue-600 font-medium text-white shadow-2xl transition-all duration-300 before:absolute before:inset-0 before:border-0 before:border-white before:duration-100 before:ease-linear hover:bg-white hover:text-blue-600 hover:shadow-blue-600 hover:before:border-[25px]">
+                <span class="relative z-10">Hide Background</span>
+              </button>
+              <button class="group relative h-12 w-48 overflow-hidden rounded-2xl bg-green-500 text-lg font-bold text-white">
+                Hover me!
+                <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+              </button>
+              <button class='bg-gray-700 rounded-md text-white font-bold w-28 h-12 relative
+              before:w-full before:h-full before:scale-x-[1.15] before:scale-y-[1.35]  before:absolute before:top-[50%] before:left-[50%]
+              before:-z-10 before:translate-x-[-50%] before:translate-y-[-50%] 
+              before:from-rose-500 before:to-yellow-500 before:bg-gradient-to-br
+              before:rounded-md  
+              hover:bg-gray-600 transition-all duration-300
+          '>
+              Button
+          </button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Accordion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+  <div class="max-w-lg mx-auto my-10">
+    <div class="accordion">
+      <div class="accordion-item active border border-gray-300 rounded mb-2">
+        <button class="accordion-button w-full text-left bg-gray-200 p-4 hover:bg-gray-300 transition-colors">
+          Section 1
+        </button>
+        <div class="accordion-content overflow-hidden transition-all">
+          <p class="p-4">This is the content for section 1.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item border border-gray-300 rounded mb-2">
+        <button class="accordion-button w-full text-left bg-gray-200 p-4 hover:bg-gray-300 transition-colors">
+          Section 2
+        </button>
+        <div class="accordion-content overflow-hidden transition-all max-h-0">
+          <p class="p-4">This is the content for section 2.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item border border-gray-300 rounded mb-2">
+        <button class="accordion-button w-full text-left bg-gray-200 p-4 hover:bg-gray-300 transition-colors">
+          Section 3
+        </button>
+        <div class="accordion-content overflow-hidden transition-all max-h-0">
+          <p class="p-4">This is the content for section 3.</p>
+        </div>
+      </div>
+      <div class="accordion-item border border-gray-300 rounded mb-2">
+        <button class="accordion-button w-full text-left bg-gray-200 p-4 hover:bg-gray-300 transition-colors">
+          Section 4
+        </button>
+        <div class="accordion-content overflow-hidden transition-all max-h-0">
+          <p class="p-4">This is the content for section 4.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>document.querySelectorAll('.accordion-button').forEach(button => {
+    const allItems = document.querySelectorAll('.accordion-item');
+    
+    // Open the first accordion item by default
+    const firstItem = allItems[0];
+    firstItem.querySelector('.accordion-content').style.maxHeight = firstItem.querySelector('.accordion-content').scrollHeight + 'px';
+  
+    button.addEventListener('click', () => {
+      const accordionItem = button.parentElement;
+      
+      // Close all accordion items first
+      allItems.forEach(item => {
+        if (item !== accordionItem) {
+          item.classList.remove('active');
+          item.querySelector('.accordion-content').style.maxHeight = 0;
+        }
+      });
+      
+      // Toggle the clicked accordion item
+      accordionItem.classList.toggle('active');
+      const accordionContent = button.nextElementSibling;
+  
+      if (accordionItem.classList.contains('active')) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      } else {
+        accordionContent.style.maxHeight = 0;
+      }
+    });
+  });
+  </script>
+</body>
+</html>
