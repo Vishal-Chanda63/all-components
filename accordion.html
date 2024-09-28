@@ -91,15 +91,12 @@
   <script>
     document.querySelectorAll('.accordion-button').forEach(button => {
   const allItems = document.querySelectorAll('.accordion-item');
-  
-  // Open the first accordion item by default
   const firstItem = allItems[0];
   firstItem.querySelector('.accordion-content').style.maxHeight = firstItem.querySelector('.accordion-content').scrollHeight + 'px';
 
   button.addEventListener('click', () => {
     const accordionItem = button.parentElement;
     
-    // Close all accordion items first
     allItems.forEach(item => {
       if (item !== accordionItem) {
         item.classList.remove('active');
@@ -107,7 +104,6 @@
       }
     });
     
-    // Toggle the clicked accordion item
     accordionItem.classList.toggle('active');
     const accordionContent = button.nextElementSibling;
 

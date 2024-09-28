@@ -106,7 +106,6 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
   let isValid = true;
 
-  // Name validation
   if (nameInput.value.trim() === '') {
     document.getElementById('nameError').style.display = 'block';
     isValid = false;
@@ -114,15 +113,12 @@ form.addEventListener('submit', function(event) {
     document.getElementById('nameError').style.display = 'none';
   }
 
-  // Email validation
   if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
     document.getElementById('emailError').style.display = 'block';
     isValid = false;
   } else {
     document.getElementById('emailError').style.display = 'none';
   }
-
-  // Phone number validation
   const phonePattern = /^[0-9]{10}$/;
   if (!phonePattern.test(phoneInput.value)) {
     document.getElementById('phoneError').style.display = 'block';
@@ -131,7 +127,6 @@ form.addEventListener('submit', function(event) {
     document.getElementById('phoneError').style.display = 'none';
   }
 
-  // Password validation
   if (passwordInput.value.length < 6) {
     document.getElementById('passwordError').style.display = 'block';
     isValid = false;

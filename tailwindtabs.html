@@ -62,18 +62,12 @@
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const targetTab = button.getAttribute('data-tab');
-
-                    // Remove 'active' class from all tabs and contents
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
-
-                    // Add 'active' class to the clicked tab and corresponding content
                     button.classList.add('active');
                     document.querySelector(`#tab${targetTab}`).classList.add('active');
                 });
             });
-
-            // Optionally, activate the first tab by default
             if (tabButtons.length > 0) {
                 tabButtons[0].click();
             }

@@ -48,7 +48,6 @@
       event.preventDefault();
       let isValid = true;
 
-      // Name validation
       if (nameInput.value.trim() === '') {
         document.getElementById('nameError').classList.remove('hidden');
         isValid = false;
@@ -56,7 +55,6 @@
         document.getElementById('nameError').classList.add('hidden');
       }
 
-      // Email validation
       if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
         document.getElementById('emailError').classList.remove('hidden');
         isValid = false;
@@ -64,7 +62,6 @@
         document.getElementById('emailError').classList.add('hidden');
       }
 
-      // Phone number validation
       const phonePattern = /^[0-9]{10}$/;
       if (!phonePattern.test(phoneInput.value)) {
         document.getElementById('phoneError').classList.remove('hidden');
@@ -72,8 +69,6 @@
       } else {
         document.getElementById('phoneError').classList.add('hidden');
       }
-
-      // Password validation
       if (passwordInput.value.length < 6) {
         document.getElementById('passwordError').classList.remove('hidden');
         isValid = false;
